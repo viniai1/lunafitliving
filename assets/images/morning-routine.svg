@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
+  <title id="title">Healthy morning routine</title>
+  <desc id="desc">Editorial illustration of sunlight, tea, fruit and a morning journal.</desc>
+  <rect width="1000" height="760" fill="#eadbd5"/>
+  <circle cx="180" cy="150" r="90" fill="#fff4cc"/>
+  <path d="M180 18v62M180 220v62M48 150h62m140 0h62M86 56l44 44m100 100 44 44m0-188-44 44M130 200l-44 44" stroke="#b98670" stroke-width="9" stroke-linecap="round"/>
+  <rect x="318" y="206" width="412" height="355" rx="10" fill="#fffdf9" transform="rotate(-5 318 206)"/>
+  <path d="M375 311h286M375 370h226M375 429h264" stroke="#c9c0b4" stroke-width="8" stroke-linecap="round" transform="rotate(-5 318 206)"/>
+  <path d="M700 408h142v126c0 51-33 80-71 80s-71-29-71-80z" fill="#d8dfd5"/>
+  <path d="M842 438h30c58 0 58 91 0 91h-30" fill="none" stroke="#61705f" stroke-width="14"/>
+  <path d="M744 370c-5-46 37-60 49-98 35 41-12 69-49 98z" fill="#fffdf9" opacity=".75"/>
+  <circle cx="275" cy="575" r="74" fill="#d9a56f"/>
+  <path d="M266 492c14-40 49-52 80-33-17 34-44 43-80 33z" fill="#61705f"/>
+</svg>
+
