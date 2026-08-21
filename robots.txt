@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viniai1.github.io/lunafitliving/sitemap.xml
+

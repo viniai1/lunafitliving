@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Wellness lifestyle illustration</title>
+  <desc id="desc">An editorial illustration of a woman stretching beside a plant and exercise mat.</desc>
+  <rect width="1000" height="1200" fill="#e8e0d4"/>
+  <circle cx="765" cy="236" r="166" fill="#eadbd5"/>
+  <path d="M0 887C205 775 430 805 618 894s277 72 382 10v296H0z" fill="#d8dfd5"/>
+  <rect x="165" y="944" width="528" height="34" rx="17" fill="#8e9b8b"/>
+  <path d="M728 820c17-126 46-216 88-271m-65 164c66-30 99-77 105-141m-119 194c-61-32-87-78-80-137" fill="none" stroke="#61705f" stroke-width="14" stroke-linecap="round"/>
+  <path d="M808 545c56-47 110-45 161-8-45 66-97 77-161 8zm-63 94c-58-43-108-38-150 7 51 58 102 58 150-7zm76-6c51-34 96-23 135 22-50 47-95 40-135-22z" fill="#9caa98"/>
+  <path d="M775 827h143l-24 120H798z" fill="#fffdf9"/>
+  <circle cx="405" cy="340" r="72" fill="#b98670"/>
+  <path d="M342 321c16-84 130-112 179-25-32 30-56 42-88 47-28-1-57-8-91-22z" fill="#3d3833"/>
+  <path d="M409 416c-58 25-96 79-104 161l-21 211 160 4 40-182c19-84-13-171-75-194z" fill="#fffdf9"/>
+  <path d="M319 507c-64 95-116 187-154 276m283-297c80 66 141 143 198 227" fill="none" stroke="#b98670" stroke-width="34" stroke-linecap="round"/>
+  <path d="M310 790c-26 85-88 152-186 198m318-195c74 66 140 126 198 193" fill="none" stroke="#3d3833" stroke-width="54" stroke-linecap="round"/>
+  <circle cx="147" cy="780" r="22" fill="#b98670"/>
+  <circle cx="648" cy="717" r="22" fill="#b98670"/>
+</svg>
+

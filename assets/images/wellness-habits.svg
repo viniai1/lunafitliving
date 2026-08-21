@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
+  <title id="title">Simple wellness habits</title>
+  <desc id="desc">Editorial illustration of a candle, leafy plant and small wellness objects.</desc>
+  <rect width="1000" height="760" fill="#d8dfd5"/>
+  <circle cx="762" cy="174" r="130" fill="#eadbd5"/>
+  <path d="M212 535c28-186 73-316 134-391m-88 279c91-49 135-115 132-201m-145 242c-79-36-119-96-120-177" fill="none" stroke="#61705f" stroke-width="16" stroke-linecap="round"/>
+  <path d="M345 143c74-49 144-36 208 41-70 69-141 55-208-41zm-91 179c-75-55-144-46-207 27 67 70 137 61 207-27zm42 82c79-41 148-21 204 58-78 61-146 42-204-58z" fill="#8e9b8b"/>
+  <path d="M142 531h253l-37 142H179z" fill="#fffdf9"/>
+  <rect x="535" y="332" width="181" height="259" rx="6" fill="#fffdf9"/>
+  <path d="M625 332c-46-70-21-122 2-152 34 52 51 97-2 152z" fill="#d9a56f"/>
+  <rect x="564" y="383" width="123" height="147" rx="4" fill="#eadbd5"/>
+  <circle cx="819" cy="538" r="84" fill="#fffdf9"/>
+  <path d="M777 538h84M819 496v84" stroke="#b98670" stroke-width="10" stroke-linecap="round"/>
+</svg>
+

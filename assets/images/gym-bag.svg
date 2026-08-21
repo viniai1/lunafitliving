@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" role="img" aria-labelledby="title desc">
+  <title id="title">Gym bag essentials</title>
+  <desc id="desc">Editorial illustration of a gym tote, sneakers and water bottle.</desc>
+  <rect width="1000" height="760" fill="#e8e0d4"/>
+  <path d="M247 253h404l55 350H194z" fill="#b98670"/>
+  <path d="M325 293c0-125 62-166 124-166s124 41 124 166" fill="none" stroke="#28241f" stroke-width="28"/>
+  <rect x="299" y="329" width="300" height="205" fill="#eadbd5" opacity=".48"/>
+  <path d="M731 226h82l19 295H712z" fill="#fffdf9"/>
+  <path d="M746 183h52v49h-52z" fill="#61705f"/>
+  <path d="M713 364h115" stroke="#d8dfd5" stroke-width="48"/>
+  <path d="M238 613c34-77 92-112 174-79l93 38c35 14 30 65-8 72-96 18-191 26-284 23-22-1-29-31-10-42z" fill="#fffdf9"/>
+  <path d="M250 607c82 20 163 20 245-1" fill="none" stroke="#61705f" stroke-width="12"/>
+</svg>
+
