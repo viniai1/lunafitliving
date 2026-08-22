@@ -91,21 +91,15 @@ The workflow in `.github/workflows/pages.yml` deploys the repository whenever `m
 2. Under **Build and deployment**, choose **GitHub Actions** as the source if it is not already selected.
 3. Open **Actions** and confirm that **Deploy static site to GitHub Pages** succeeds.
 
-The project URL is expected to be:
+The official site URL is:
 
-`https://viniai1.github.io/lunafitliving/`
+`https://lunafitliving.com/`
 
-## Before connecting lunafitliving.com
+## Custom domain
 
-The prototype intentionally uses the GitHub Pages URL in canonical tags, Open Graph tags, `robots.txt` and `sitemap.xml`. When the custom domain is connected, replace every occurrence of:
+`lunafitliving.com` is configured as the custom domain for GitHub Pages. Canonical URLs, Open Graph metadata, JSON-LD, `robots.txt` and `sitemap.xml` use the HTTPS custom domain as the official address.
 
-`https://viniai1.github.io/lunafitliving`
-
-with:
-
-`https://lunafitliving.com`
-
-Then add the final domain in GitHub Pages settings and configure its DNS records. Do not add a `CNAME` file until that step.
+Keep the GitHub Pages source set to **GitHub Actions**. If the domain changes in the future, update the Pages configuration and every absolute SEO URL together.
 
 ## Suggested next steps
 
