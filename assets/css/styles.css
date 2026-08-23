@@ -337,6 +337,7 @@ p {
 
 .hero__image {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
 }
@@ -384,6 +385,7 @@ p {
 
 .card__image {
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   transition: transform 500ms ease;
@@ -457,6 +459,7 @@ p {
 
 .about-feature__image {
   width: 100%;
+  height: auto;
   aspect-ratio: 5 / 4;
   object-fit: cover;
 }
@@ -565,6 +568,7 @@ p {
 
 .article-hero-image {
   width: min(calc(100% - 2rem), var(--container));
+  height: auto;
   max-height: 760px;
   margin-inline: auto;
   object-fit: cover;
