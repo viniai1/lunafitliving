@@ -18,7 +18,7 @@ Static MVP for **Luna Fit Living**, an editorial fitness, wellness and healthy-l
 ├── assets/
 │   ├── css/styles.css             # Shared colors, typography and layouts
 │   ├── js/main.js                 # Mobile menu and newsletter prototype
-│   └── images/                    # Image placeholders and favicon
+│   └── images/                    # Optimized WebP photography and favicon
 ├── sitemap.xml
 ├── robots.txt
 └── .github/workflows/pages.yml    # Automatic GitHub Pages deployment
@@ -39,7 +39,7 @@ Keep one `<h1>` per page. Use `<h2>` for main article sections and `<h3>` for se
 
 ## Replace images
 
-1. Add the new image to `assets/images/`. Prefer descriptive lowercase filenames such as `luna-home-workout.jpg`.
+1. Add the new image to `assets/images/`. Prefer descriptive lowercase WebP filenames such as `luna-home-workout.webp`.
 2. Replace the old `src` value in the page.
 3. Update the image `alt` text so it describes the new image.
 4. If the image is the main social preview, update the absolute `og:image` URL in the page `<head>`.
@@ -91,19 +91,17 @@ The workflow in `.github/workflows/pages.yml` deploys the repository whenever `m
 2. Under **Build and deployment**, choose **GitHub Actions** as the source if it is not already selected.
 3. Open **Actions** and confirm that **Deploy static site to GitHub Pages** succeeds.
 
-The official site URL is:
+The public site is available at:
 
 `https://lunafitliving.com/`
 
 ## Custom domain
 
-`lunafitliving.com` is configured as the custom domain for GitHub Pages. Canonical URLs, Open Graph metadata, JSON-LD, `robots.txt` and `sitemap.xml` use the HTTPS custom domain as the official address.
-
-Keep the GitHub Pages source set to **GitHub Actions**. If the domain changes in the future, update the Pages configuration and every absolute SEO URL together.
+The custom domain is configured through GitHub Pages. Canonical URLs, social metadata, `robots.txt` and `sitemap.xml` use `https://lunafitliving.com/` as the official address.
 
 ## Suggested next steps
 
-- Replace illustration placeholders with final Luna photography.
+- Create the remaining article pages using the prepared cover and in-article photography.
 - Create real Privacy Policy, Affiliate Disclosure and Contact pages.
 - Connect newsletter signup to a provider.
 - Add analytics and Pinterest Tag after the content strategy is ready.
