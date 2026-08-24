@@ -13,8 +13,8 @@ Static MVP for **Luna Fit Living**, an editorial fitness, wellness and healthy-l
 │   ├── healthy-lifestyle/index.html
 │   ├── gym-style/index.html
 │   └── wellness/index.html
-├── articles/
-│   └── home-workout-essentials-for-women/index.html
+├── home-workout-essentials-for-women/
+│   └── index.html                 # First published editorial article
 ├── assets/
 │   ├── css/styles.css             # Shared colors, typography and layouts
 │   ├── js/main.js                 # Mobile menu and newsletter prototype
@@ -24,7 +24,7 @@ Static MVP for **Luna Fit Living**, an editorial fitness, wellness and healthy-l
 └── .github/workflows/pages.yml    # Automatic GitHub Pages deployment
 ```
 
-Each page lives in its own folder and uses `index.html`. This creates clean URLs such as `/categories/fitness/` and `/articles/home-workout-essentials-for-women/`.
+Each page lives in its own folder and uses `index.html`. This creates clean URLs such as `/categories/fitness/` and `/home-workout-essentials-for-women/`.
 
 ## Edit text
 
@@ -48,19 +48,19 @@ For article and Pinterest traffic, a wide main image around 1600 × 1000 px is a
 
 ## Add an article
 
-1. Copy the folder `articles/home-workout-essentials-for-women/`.
-2. Rename the copy with a short lowercase slug, for example `articles/best-resistance-bands-for-beginners/`.
+1. Copy the folder `home-workout-essentials-for-women/`.
+2. Rename the copy with a short lowercase slug, for example `best-resistance-bands-for-beginners/`.
 3. Edit the new `index.html`:
    - `<title>` and meta description;
    - canonical and Open Graph URLs;
    - article title, introduction, headings and body;
    - main image and alt text;
    - Article JSON-LD fields;
-   - product buttons and related links.
+   - any product buttons or related links included in that article's publishing brief.
 4. Add an article card to the matching category page and, if featured, to the homepage.
 5. Add the new public URL to `sitemap.xml`.
 
-Product links should use `rel="nofollow sponsored"`. Replace the prototype affiliate note with the final disclosure before monetizing the site.
+When product links are introduced later, they should use `rel="nofollow sponsored"` and follow the site's final affiliate disclosure.
 
 ## Add a category
 

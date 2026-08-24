@@ -622,6 +622,27 @@ p {
   line-height: 1.5;
 }
 
+.article-faq {
+  margin-top: 4rem;
+}
+
+.article-faq__item {
+  padding-block: 1.4rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.article-faq__item:last-child {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.article-faq__item h3 {
+  margin: 0 0 0.75rem;
+}
+
+.article-faq__item p:last-child {
+  margin-bottom: 0;
+}
+
 .article-intro {
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--color-line);
