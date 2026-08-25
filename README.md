@@ -8,6 +8,10 @@ Static MVP for **Luna Fit Living**, an editorial fitness, wellness and healthy-l
 .
 ├── index.html                     # Homepage
 ├── about/index.html               # About page
+├── contact/index.html             # Contact page
+├── privacy-policy/index.html      # Privacy Policy
+├── affiliate-disclosure/index.html # Affiliate disclosure
+├── 404.html                       # GitHub Pages not-found page
 ├── categories/
 │   ├── fitness/index.html
 │   ├── healthy-lifestyle/index.html
@@ -17,7 +21,7 @@ Static MVP for **Luna Fit Living**, an editorial fitness, wellness and healthy-l
 │   └── index.html                 # First published editorial article
 ├── assets/
 │   ├── css/styles.css             # Shared colors, typography and layouts
-│   ├── js/main.js                 # Mobile menu and newsletter prototype
+│   ├── js/main.js                 # Mobile menu and automatic footer year
 │   └── images/                    # Optimized WebP photography and favicon
 ├── sitemap.xml
 ├── robots.txt
@@ -102,7 +106,6 @@ The custom domain is configured through GitHub Pages. Canonical URLs, social met
 ## Suggested next steps
 
 - Create the remaining article pages using the prepared cover and in-article photography.
-- Create real Privacy Policy, Affiliate Disclosure and Contact pages.
-- Connect newsletter signup to a provider.
+- Connect the newsletter section to a real provider when email collection is ready.
 - Add analytics and Pinterest Tag after the content strategy is ready.
 - Consider a small static site generator when the article library becomes large, while keeping the same URLs and design system.
