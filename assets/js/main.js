@@ -28,17 +28,6 @@ if (navToggle && nav) {
   });
 }
 
-document.querySelectorAll("[data-newsletter-form]").forEach((form) => {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const message = form.parentElement.querySelector("[data-form-message]");
-    if (message) {
-      message.textContent = "Thanks for your interest — newsletter signup is coming soon.";
-    }
-    form.reset();
-  });
-});
-
 document.querySelectorAll("[data-current-year]").forEach((element) => {
   element.textContent = new Date().getFullYear();
 });
