@@ -1,3 +1,80 @@
+const ANALYTICS_MEASUREMENT_ID = "G-64GZL48QCL";
+const ANALYTICS_CONSENT_KEY = "lunaFitLivingAnalyticsConsent";
+
+const getAnalyticsConsent = () => {
+  try {
+    return window.localStorage.getItem(ANALYTICS_CONSENT_KEY);
+  } catch {
+    return null;
+  }
+};
+
+const setAnalyticsConsent = (value) => {
+  try {
+    window.localStorage.setItem(ANALYTICS_CONSENT_KEY, value);
+  } catch {
+    // The choice still applies to the current page if storage is unavailable.
+  }
+};
+
+const loadAnalytics = () => {
+  if (document.querySelector("script[data-luna-ga4]")) return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function () {
+    window.dataLayer.push(arguments);
+  };
+
+  window.gtag("js", new Date());
+  window.gtag("config", ANALYTICS_MEASUREMENT_ID);
+
+  const analyticsScript = document.createElement("script");
+  analyticsScript.async = true;
+  analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_MEASUREMENT_ID}`;
+  analyticsScript.dataset.lunaGa4 = ANALYTICS_MEASUREMENT_ID;
+  document.head.appendChild(analyticsScript);
+};
+
+const showAnalyticsConsent = () => {
+  const consent = document.createElement("section");
+  consent.className = "analytics-consent";
+  consent.setAttribute("role", "region");
+  consent.setAttribute("aria-labelledby", "analytics-consent-title");
+  consent.innerHTML = `
+    <div class="analytics-consent__copy">
+      <p class="analytics-consent__title" id="analytics-consent-title">Analytics &amp; privacy</p>
+      <p>We use optional analytics to understand how visitors use Luna Fit Living and improve the site. <a href="/privacy-policy/">Privacy Policy</a></p>
+    </div>
+    <div class="analytics-consent__actions">
+      <button class="analytics-consent__button" type="button" data-analytics-accept>Accept analytics</button>
+      <button class="analytics-consent__button" type="button" data-analytics-decline>Decline</button>
+    </div>
+  `;
+
+  consent.querySelector("[data-analytics-accept]").addEventListener("click", () => {
+    setAnalyticsConsent("accepted");
+    loadAnalytics();
+    consent.remove();
+  });
+
+  consent.querySelector("[data-analytics-decline]").addEventListener("click", () => {
+    setAnalyticsConsent("declined");
+    consent.remove();
+  });
+
+  document.body.appendChild(consent);
+};
+
+if (document.body.hasAttribute("data-analytics-consent")) {
+  const analyticsConsent = getAnalyticsConsent();
+
+  if (analyticsConsent === "accepted") {
+    loadAnalytics();
+  } else if (analyticsConsent !== "declined") {
+    showAnalyticsConsent();
+  }
+}
+
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
 
