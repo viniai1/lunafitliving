@@ -21,7 +21,7 @@ Static MVP for **Luna Fit Living**, an editorial fitness, wellness and healthy-l
 │   └── index.html                 # First published editorial article
 ├── assets/
 │   ├── css/styles.css             # Shared colors, typography and layouts
-│   ├── js/main.js                 # Mobile menu and automatic footer year
+│   ├── js/main.js                 # Mobile menu, footer year and consent-based GA4
 │   └── images/                    # Optimized WebP photography and favicon
 ├── sitemap.xml
 ├── robots.txt
@@ -103,9 +103,16 @@ The public site is available at:
 
 The custom domain is configured through GitHub Pages. Canonical URLs, social metadata, `robots.txt` and `sitemap.xml` use `https://lunafitliving.com/` as the official address.
 
+## Analytics consent
+
+Google Analytics 4 uses Measurement ID `G-64GZL48QCL` and is loaded by `assets/js/main.js` only after the visitor selects **Accept analytics**. The choice is stored locally under `lunaFitLivingAnalyticsConsent` as `accepted` or `declined`.
+
+Pages that should display the consent component use the `data-analytics-consent` attribute on `<body>`. Do not add the Google tag directly to individual HTML files.
+
+Empty categories use `noindex, follow` and remain outside `sitemap.xml`. When a category receives its first published article, remove that directive and restore its URL to the sitemap.
+
 ## Suggested next steps
 
 - Create the remaining article pages using the prepared cover and in-article photography.
 - Connect the newsletter section to a real provider when email collection is ready.
-- Add analytics and Pinterest Tag after the content strategy is ready.
 - Consider a small static site generator when the article library becomes large, while keeping the same URLs and design system.
