@@ -2,6 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://lunafitliving.com/</loc></url>
   <url><loc>https://lunafitliving.com/categories/fitness/</loc></url>
+  <url>
+    <loc>https://lunafitliving.com/categories/healthy-lifestyle/</loc>
+    <lastmod>2026-08-26</lastmod>
+  </url>
   <url><loc>https://lunafitliving.com/about/</loc></url>
   <url>
     <loc>https://lunafitliving.com/contact/</loc>
@@ -18,5 +22,9 @@
   <url>
     <loc>https://lunafitliving.com/home-workout-essentials-for-women/</loc>
     <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://lunafitliving.com/healthy-morning-routine-ideas/</loc>
+    <lastmod>2026-08-26</lastmod>
   </url>
 </urlset>
