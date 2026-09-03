@@ -143,13 +143,6 @@
   border-color: var(--reset-sage-deep);
   background: var(--reset-sage-deep);
   color: var(--color-white);
-  cursor: not-allowed;
-  pointer-events: none;
-  user-select: none;
-}
-
-.reset-cta[aria-disabled="true"] {
-  opacity: 0.88;
 }
 
 .reset-hero__action .reset-cta {
