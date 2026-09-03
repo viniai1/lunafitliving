@@ -9,7 +9,11 @@ const getAnalyticsConsent = () => {
   }
 };
 
+let analyticsConsent = getAnalyticsConsent();
+
 const setAnalyticsConsent = (value) => {
+  analyticsConsent = value;
+
   try {
     window.localStorage.setItem(ANALYTICS_CONSENT_KEY, value);
   } catch {
@@ -66,14 +70,34 @@ const showAnalyticsConsent = () => {
 };
 
 if (document.body.hasAttribute("data-analytics-consent")) {
-  const analyticsConsent = getAnalyticsConsent();
-
   if (analyticsConsent === "accepted") {
     loadAnalytics();
   } else if (analyticsConsent !== "declined") {
     showAnalyticsConsent();
   }
 }
+
+const trackCheckoutStart = (event) => {
+  if (analyticsConsent !== "accepted" || typeof window.gtag !== "function") return;
+
+  window.gtag("event", "begin_checkout", {
+    currency: "USD",
+    value: 9,
+    items: [
+      {
+        item_id: "30-day-healthy-lifestyle-reset",
+        item_name: "30-Day Healthy Lifestyle Reset",
+        price: 9,
+        quantity: 1,
+      },
+    ],
+    cta_location: event.currentTarget.dataset.ctaLocation,
+  });
+};
+
+document.querySelectorAll("[data-checkout-cta][data-cta-location]").forEach((cta) => {
+  cta.addEventListener("click", trackCheckoutStart);
+});
 
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
