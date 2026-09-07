@@ -77,10 +77,18 @@ if (document.body.hasAttribute("data-analytics-consent")) {
   }
 }
 
-const trackCheckoutStart = (event) => {
+const trackAnalyticsEvent = (eventName, parameters) => {
   if (analyticsConsent !== "accepted" || typeof window.gtag !== "function") return;
 
-  window.gtag("event", "begin_checkout", {
+  try {
+    window.gtag("event", eventName, parameters);
+  } catch {
+    // Analytics must never interrupt the visitor's action.
+  }
+};
+
+const trackCheckoutStart = (event) => {
+  trackAnalyticsEvent("begin_checkout", {
     currency: "USD",
     value: 9,
     items: [
@@ -97,6 +105,16 @@ const trackCheckoutStart = (event) => {
 
 document.querySelectorAll("[data-checkout-cta][data-cta-location]").forEach((cta) => {
   cta.addEventListener("click", trackCheckoutStart);
+});
+
+const trackLinkHubClick = (event) => {
+  trackAnalyticsEvent("link_hub_click", {
+    destination: event.currentTarget.dataset.linkHubDestination,
+  });
+};
+
+document.querySelectorAll("[data-link-hub-destination]").forEach((link) => {
+  link.addEventListener("click", trackLinkHubClick);
 });
 
 const navToggle = document.querySelector("[data-nav-toggle]");
