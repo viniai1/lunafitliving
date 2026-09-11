@@ -64,7 +64,37 @@ For article and Pinterest traffic, a wide main image around 1600 × 1000 px is a
 4. Add an article card to the matching category page and, if featured, to the homepage.
 5. Add the new public URL to `sitemap.xml`.
 
-When product links are introduced later, they should use `rel="nofollow sponsored"` and follow the site's final affiliate disclosure.
+### Add affiliate links
+
+Only use affiliate markup in an article that has an active affiliate relationship. Place the article-level disclosure after the article title and metadata (and hero image, when present), before the article body begins:
+
+```html
+<!-- Article title / metadata → affiliate disclosure → article body -->
+<aside class="article-affiliate-disclosure narrow" aria-label="Affiliate disclosure">
+  <p><strong>Affiliate disclosure:</strong> This article contains affiliate links. If you make a purchase through one of these links, Luna Fit Living may earn a commission at no additional cost to you.</p>
+</aside>
+```
+
+Add `affiliate-link` to every affiliate anchor and include `rel="sponsored"`. The data attributes are optional but should be populated whenever the information is available:
+
+```html
+<!-- Documentation example only: replace the placeholder before publishing. -->
+<a
+  href="AFFILIATE_URL_HERE"
+  class="affiliate-link"
+  rel="sponsored"
+  data-affiliate-merchant="ape_born"
+  data-affiliate-product="example-product"
+  data-affiliate-placement="inline"
+  data-affiliate-article="example-article"
+>
+  View product
+</a>
+```
+
+The merchant value is not limited to the example above; tracking works for any merchant without a JavaScript change. Supported placement labels can include `inline`, `product_card`, `cta`, `comparison` and `image`. If an affiliate link intentionally uses `target="_blank"`, add `noopener noreferrer` to its `rel` value as well.
+
+Affiliate clicks are tracked as `affiliate_click` only when analytics consent is already accepted and GA4 is available. The event uses `merchant`, `product`, `article`, `placement`, `link_text` and `destination_host`; it never sends the full affiliate URL. The link itself always works, regardless of analytics consent.
 
 ## Add a category
 

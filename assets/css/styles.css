@@ -615,6 +615,21 @@ p {
   font-size: 0.85rem;
 }
 
+.article-affiliate-disclosure {
+  margin-block: 2rem;
+  padding: 1rem 1.2rem;
+  border-left: 2px solid var(--color-sage-deep);
+  background: var(--color-sage);
+  color: var(--color-ink);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.article-affiliate-disclosure p {
+  margin: 0;
+  color: inherit;
+}
+
 .product-box {
   display: grid;
   gap: 1.25rem;

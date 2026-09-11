@@ -117,6 +117,37 @@ document.querySelectorAll("[data-link-hub-destination]").forEach((link) => {
   link.addEventListener("click", trackLinkHubClick);
 });
 
+const getArticleIdentifier = (link) => {
+  if (link.dataset.affiliateArticle) return link.dataset.affiliateArticle;
+
+  const pathSegments = window.location.pathname.split("/").filter(Boolean);
+  return pathSegments.at(-1) || "home";
+};
+
+const getDestinationHost = (link) => {
+  try {
+    return new URL(link.href, window.location.href).hostname;
+  } catch {
+    return "";
+  }
+};
+
+document.addEventListener("click", (event) => {
+  if (!(event.target instanceof Element)) return;
+
+  const affiliateLink = event.target.closest("a.affiliate-link");
+  if (!affiliateLink) return;
+
+  trackAnalyticsEvent("affiliate_click", {
+    merchant: affiliateLink.dataset.affiliateMerchant || "not_set",
+    product: affiliateLink.dataset.affiliateProduct || "not_set",
+    article: getArticleIdentifier(affiliateLink),
+    placement: affiliateLink.dataset.affiliatePlacement || "not_set",
+    link_text: affiliateLink.textContent.trim().replace(/\s+/g, " ").slice(0, 100),
+    destination_host: getDestinationHost(affiliateLink),
+  });
+});
+
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
 
