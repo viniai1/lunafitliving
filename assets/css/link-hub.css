@@ -87,6 +87,10 @@
   color: var(--color-white);
 }
 
+.link-card--secondary {
+  border-color: rgba(97, 112, 95, 0.38);
+}
+
 .link-card--social {
   background: transparent;
 }
@@ -170,6 +174,29 @@
 
   .link-hub__footer a:hover {
     color: var(--color-sage-deep);
+  }
+}
+
+@media (max-width: 599px) {
+  .link-hub {
+    padding-top: 2.15rem;
+    padding-bottom: 4rem;
+  }
+
+  .link-hub__brand {
+    padding-bottom: 1.45rem;
+  }
+
+  .link-hub__brand-name .site-logo {
+    font-size: clamp(1.86rem, 9.35vw, 2.95rem);
+  }
+
+  .link-hub__brand p {
+    margin-top: 0.85rem;
+  }
+
+  .link-hub__navigation {
+    margin-top: 1.65rem;
   }
 }
 
