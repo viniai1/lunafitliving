@@ -630,6 +630,38 @@ p {
   color: inherit;
 }
 
+.article-table-wrap {
+  margin: 2.5rem 0;
+  overflow-x: auto;
+  border: 1px solid var(--color-line);
+  -webkit-overflow-scrolling: touch;
+}
+
+.article-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  background: var(--color-surface);
+}
+
+.article-table th,
+.article-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--color-line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.article-table th {
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.article-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
 .product-box {
   display: grid;
   gap: 1.25rem;
